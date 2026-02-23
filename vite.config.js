@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // so assets load correctly on GitHub Pages (e.g. username.github.io/repo-name/)
+  // Must match GitHub Pages path: https://roon360.github.io/ads/
+  base: '/ads/',
 })
