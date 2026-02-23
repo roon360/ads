@@ -65,13 +65,15 @@ Replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with your GitHub username and repo 
 
 - In the repo on GitHub, go to **Settings** → **Pages**.
 - Under **Build and deployment**:
-  - **Source**: choose **GitHub Actions**.
-- Save. No need to pick a branch; the workflow will deploy.
+  - **Source**: choose **Deploy from a branch**.
+  - **Branch**: select **gh-pages** and **/ (root)**.
+- Click **Save**.
 
 ### 4. Trigger a deploy
 
-- Every **push to `main`** runs the workflow and deploys the built site.
-- You can also run it once by hand: **Actions** → **Deploy to GitHub Pages** → **Run workflow**.
+- Every **push to `main`** runs the workflow: it builds the site and pushes the built files to the **gh-pages** branch. Pages then serves that.
+- Run it once by hand: **Actions** → **Deploy to GitHub Pages** → **Run workflow**.
+- The **gh-pages** branch is created/updated by the workflow (you don’t create it yourself).
 
 ### 5. Your live site
 
